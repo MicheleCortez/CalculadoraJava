@@ -1,2 +1,30 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+package calculadora;
+
+import java.util.Scanner;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		
+	Scanner entrada = new Scanner(System.in);
+	
+	System.out.println("Informe o primeiro valor: ");
+	double n1 = entrada.nextDouble();
+	
+	System.out.println("Informe o segundo valor: ");
+	double n2 = entrada.nextDouble();
+	
+	Calculadora calculo = new Calculadora();
+	
+	System.out.println("SOMA " + calculo.soma(n1, n2));
+	System.out.println("SUBTRAÇÃO " + calculo.sub(n1, n2));
+	System.out.println("MULTIPLICAÇÃO " + calculo.multi(n1, n2));
+	System.out.println("DIVISÃO " + calculo.div(n1, n2));
+	System.out.println("RESTO DA DIVISÃO " + calculo.resto(n1, n2));
+	
+	entrada.close();
+	}
+
+}
